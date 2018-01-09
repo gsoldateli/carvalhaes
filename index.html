@@ -23,38 +23,39 @@
 </head>
 <body>
 	<div class="content-holder">
-		<section id="page1" class="page">
+		<section class="page">
 			
 		</section>
-		<section id="page2"  class="page">
+		<section class="page">
 			
 		</section>
-		<section id="page3" class="page">
+		<section class="page">
 			
 		</section>	
-		<section id="page4" class="page">
+		<section class="page">
 			
 		</section>
-		<section id="page5" class="page">
+		<section class="page">
 			
 		</section>
-		<section id="page6" class="page">
+		<section class="page">
 			
 		</section>							
 	</div>
 	<div class="menu-holder">
-		<div onclick="scrollToElement('#page1');"  class="logo-menu">
+		<div onclick="scrollToElement('.content-holder > .page');"  class="logo-menu">
 			
 		</div>
 		<ul class="menu">
-			<li onclick="scrollToElement('#page1');" class="menu__item"></li>
-			<li onclick="scrollToElement('#page2');" class="menu__item"></li>
-			<li onclick="scrollToElement('#page3');" class="menu__item"></li>
-			<li onclick="scrollToElement('#page4');" class="menu__item"></li>
-			<li onclick="scrollToElement('#page5');" class="menu__item"></li>
-			<li onclick="scrollToElement('#page6');" class="menu__item"></li>
+			<li data-menu-id=1  class="menu__item"></li>
+			<li data-menu-id=2 class="menu__item"></li>
+			<li data-menu-id=3 class="menu__item"></li>
+			<li data-menu-id=4 class="menu__item"></li>
+			<li data-menu-id=5 class="menu__item"></li>
+			<li data-menu-id=6 class="menu__item"></li>
 		</ul>
 	</div>
 	<script src="js/scrollto.js"></script>
+	<script src="js/global.js"></script>
 </body>
 </html>
