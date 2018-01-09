@@ -1,0 +1,28 @@
+* {
+	box-sizing: border-box;
+}
+
+html {
+	font-size: 18px;
+}
+
+body {
+	margin: 0;
+}
+
+.content-holder {
+	width: 100%;
+	height: 100vh;
+	overflow-x: hidden;
+
+}
+
+.page {
+	height: 100%;
+	width: 100%;
+	background-color: #ccc;
+}
+
+.page:nth-child(even) {
+	background-color: red;
+}

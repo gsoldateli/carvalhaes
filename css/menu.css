@@ -1,0 +1,47 @@
+.menu-holder {
+	background-color: #fff;
+	width: 60px;
+	position: fixed;
+	right: 0;
+	top: 0;
+	z-index: 10;
+	height: 100%;
+}
+
+.menu {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate3d(-50%,-50%,0);
+}
+
+.logo-menu {
+	cursor: pointer;
+	background-image: url('../images/logo-menu.png');
+	background-size: contain;
+	width: 60%;
+	background-repeat: no-repeat;
+	margin: 1rem auto;
+	padding-top: 60%;
+	transition: transform .3s;
+}
+
+.logo-menu:hover {
+	transform: rotate(360deg);
+}
+
+.menu__item {
+	cursor: pointer;
+	display: block;
+	width: 18px;
+	height: 18px;
+	border-radius: 100%;
+	background-color: #ccc;
+	margin: 1rem auto;
+	transition: transform .3s, background-color .3s;
+}
+
+.menu__item:hover {
+	transform: scale(1.5);
+	background-color: #aaa;
+}
