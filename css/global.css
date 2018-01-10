@@ -10,7 +10,10 @@ body {
 	margin: 0;
 	font-family: 'Lato', 'Verdana',sans-serif;
 }
-
+.fluid-video-container {
+	width: 100%;
+	position: relative;
+}
 .img-responsive {
 	max-width: 100%;
 	height: auto;
@@ -24,18 +27,15 @@ body {
 }
 .col-50 {
 	width: 50%;
-	background-color: #003366;
 }
 
 .col-55 {
 	width: 55%;
-	background-color: #003366;
 }
 
 .col-45 {
 	width: 45%;
 	height: 100%;
-	background-color: orange;
 }
 
 .splash {
@@ -73,6 +73,7 @@ body {
 .page {
 	min-height: 100%;
 	width: 100%;
+	color: #fff;
 	background-color: #ccc;
 }
 
@@ -95,11 +96,32 @@ body {
 .page__logo {
 	margin-bottom: 4rem;
 }
-.fundo--empilhadeira {
+.cor--rosa {
+	color: #ff9966;
+}
+
+.cor--azul {
+	color: #003366;
+}
+
+.bg--azul {
+	background-color: #003366;
+}
+
+.bg--cinza-azulado {
+	background-color: #ccffff;	
+}
+
+.fundo--empilhadeira,
+.fundo--empilhadeira-rosa {
 	background-image: url('../images/bg-empilhadeira.jpg');
 	background-size: cover;
 	background-attachment: fixed;
 	background-position: center;
+}
+
+.fundo--empilhadeira-rosa {
+	background-image: url('../images/bg-empilhadeira-rosa.jpg');
 }
 
 @keyframes rotate {
