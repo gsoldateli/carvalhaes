@@ -92,8 +92,6 @@
 	    }
 	  })();
 	}
-
-
 })(window);
 
 
@@ -103,5 +101,4 @@ function onLoadPage() {
 }
 
 $.ready(onLoadPage);
-
 registerMenuActions();

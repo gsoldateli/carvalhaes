@@ -8,11 +8,34 @@ html {
 
 body {
 	margin: 0;
+	font-family: 'Lato', 'Verdana',sans-serif;
 }
 
 .img-responsive {
 	max-width: 100%;
 	height: auto;
+}
+[class*='col-'] {
+	float: left;
+	min-height: 100vh; 
+}
+.col-padding {
+	padding: 6% 4% 8% 10%;
+}
+.col-50 {
+	width: 50%;
+	background-color: #003366;
+}
+
+.col-55 {
+	width: 55%;
+	background-color: #003366;
+}
+
+.col-45 {
+	width: 45%;
+	height: 100%;
+	background-color: orange;
 }
 
 .splash {
@@ -48,13 +71,35 @@ body {
 }
 
 .page {
-	height: 100%;
+	min-height: 100%;
 	width: 100%;
 	background-color: #ccc;
 }
 
+.page:after {
+	content: "";
+	display: table;
+	clear: both;
+}
 .page:nth-child(even) {
 	background-color: red;
+}
+
+.page__titulo {
+	font-size: 3.6rem;
+	font-weight: bold;
+	color: #fff;
+	line-height: 4.3rem;
+}
+
+.page__logo {
+	margin-bottom: 4rem;
+}
+.fundo--empilhadeira {
+	background-image: url('../images/bg-empilhadeira.jpg');
+	background-size: cover;
+	background-attachment: fixed;
+	background-position: center;
 }
 
 @keyframes rotate {
