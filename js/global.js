@@ -100,6 +100,9 @@
 function onLoadPage() {
 	//Remove splash screen
 	fadeOut(document.querySelector('.splash'));
+
+	var $imageCol = document.querySelector('.same-height-previous');
+	$imageCol.style.height = $imageCol.previousElementSibling.getBoundingClientRect().height+'px';
 }
 
 $.ready(onLoadPage);

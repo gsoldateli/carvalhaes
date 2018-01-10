@@ -74,7 +74,6 @@ body {
 	min-height: 100%;
 	width: 100%;
 	color: #fff;
-	background-color: #ccc;
 }
 
 .page:after {
@@ -82,15 +81,14 @@ body {
 	display: table;
 	clear: both;
 }
-.page:nth-child(even) {
-	background-color: red;
-}
-
 .page__titulo {
 	font-size: 3.6rem;
 	font-weight: bold;
 	color: #fff;
 	line-height: 4.3rem;
+}
+.page__descricao--padding {
+	padding-left: 2rem;
 }
 
 .page__logo {
@@ -102,6 +100,10 @@ body {
 
 .cor--azul {
 	color: #003366;
+}
+
+.cor--azul-fraco {
+	color: #99cccc;
 }
 
 .bg--azul {

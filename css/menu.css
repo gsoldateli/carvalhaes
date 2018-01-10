@@ -23,8 +23,8 @@
     margin: 1rem auto;
     background-color: rgba(0,0,0,0);
     max-height: 64px;
-    transition: transform .3s, padding .3s,background-color .6s;
-    transition-delay: .3s;
+    transition: transform .3s, padding .3s,background-color .4s;
+    transition-delay: .4s;
 }
 
 .logo-menu:hover {
@@ -36,8 +36,8 @@
 
 .logo-menu__imagem {
     max-width: 38px;
-    margin-right: 6px;
-    transition: transform .3s;
+    margin-right: 8px;
+    transition: transform .5s;
 }
 
 .logo-menu:hover > .logo-menu__imagem {
