@@ -15,6 +15,31 @@ body {
 	height: auto;
 }
 
+.splash {
+	top: 0;
+	left: 0;
+	text-align: center;
+	position: fixed;
+	z-index: 1000;
+	background-color: #fff;
+	width: 100%;
+	height: 100%;
+}
+
+.splash__container {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate3d(-50%,-50%,0);
+}
+
+.splash__image {
+	display: block;
+	margin: 0 auto 1rem auto;
+
+	animation: rotate 2s linear infinite;
+}
+
 .content-holder {
 	width: 100%;
 	height: 100vh;
@@ -30,4 +55,14 @@ body {
 
 .page:nth-child(even) {
 	background-color: red;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
 }
