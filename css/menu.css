@@ -16,18 +16,39 @@
 }
 
 .logo-menu {
-	cursor: pointer;
-	background-image: url('../images/logo-menu.png');
-	background-size: contain;
-	width: 60%;
-	background-repeat: no-repeat;
-	margin: 1rem auto;
-	padding-top: 60%;
-	transition: transform .3s;
+    position: absolute;
+    width: 250px;
+    cursor: pointer;
+    padding: .5rem;
+    margin: 1rem auto;
+    background-color: rgba(0,0,0,0);
+    max-height: 64px;
+    transition: transform .3s, padding .3s,background-color .6s;
+    transition-delay: .3s;
 }
 
 .logo-menu:hover {
+	padding-left: 1rem;
+	background-color: rgba(255,255,255,1);
+	transform: translate3d(-180px,0,0);
+}
+
+
+.logo-menu__imagem {
+    max-width: 38px;
+    margin-right: 6px;
+    transition: transform .3s;
+}
+
+.logo-menu:hover > .logo-menu__imagem {
 	transform: rotate(360deg);
+}
+
+.logo-menu__label {
+    display: inline;
+    font-size: 1rem;
+    vertical-align: super;
+    color: #999;
 }
 
 .menu__item {
@@ -40,6 +61,7 @@
 	margin: 1rem auto;
 	transition: transform .3s, background-color .3s;
 }
+
 .menu__item--active,
 .menu__item:hover {
 	transform: scale(1.5);
