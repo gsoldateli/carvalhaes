@@ -106,6 +106,14 @@ body {
 .page__logo {
 	margin-bottom: 4rem;
 }
+
+.page__logo--centro {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translate3d(43%,-50%,0);
+    max-height: 550px;
+}
 .cor--rosa {
 	color: #ff9966;
 }
