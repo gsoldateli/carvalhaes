@@ -6,6 +6,15 @@ html {
 	font-size: 18px;
 }
 
+
+
+@media(max-width: 768px) {
+	html {
+		font-size: 14px;
+	}
+
+}
+
 body {
 	margin: 0;
 	font-family: 'Lato', 'Verdana',sans-serif;
@@ -36,6 +45,19 @@ body {
 .col-45 {
 	width: 45%;
 	height: 100%;
+}
+
+@media(max-width: 768px) {
+	.col-padding {
+        padding: 2rem 61px 2rem 2rem;
+	}
+	.col-50,
+	.col-45,
+	.col-55
+	{
+		width: 100%;
+	}
+
 }
 
 .splash {
@@ -151,6 +173,39 @@ body {
 	background-image: url('../images/bg-empilhadeira-rosa.jpg');
 }
 
+@media(max-width: 498px) {
+	.page__titulo:not(.page__titulo--big) {
+	    font-size: 2.4rem;
+	    line-height: 3rem;
+	}
+}
+
+@media(max-width: 768px) {
+	.page__titulo {
+	    z-index: 1000;
+    	position: relative;
+	}
+	.fundo--empilhadeira,
+	.fundo--empilhadeira-rosa,
+	.bg--footer {
+		background-attachment: scroll;
+	}
+
+	.page__descricao--padding {
+		padding-left: 0;
+	}
+
+	.page__logo--centro {
+	    top: 100%;
+	    transform: translate3d(-14%,-106%,0);
+	    opacity: .7;
+	}
+
+	.page__descricao--contato {
+		float: left;
+	}
+}
+
 @keyframes rotate {
   from {
     transform: rotate(0);
@@ -159,4 +214,11 @@ body {
   to {
     transform: rotate(360deg);
   }
+}
+
+/* hacks */
+@media(max-width: 768px) {
+	.hide-small {
+		display: none;
+	}
 }
