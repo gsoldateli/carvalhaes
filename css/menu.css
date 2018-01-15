@@ -64,7 +64,7 @@
 
 .menu__item--active,
 .menu__item:hover {
-	transform: scale(1.5);
+	transform: scale(1.45);
 	background-color: #aaa;
 }
 .menu > .menu__item:nth-child(1).menu__item--active,
