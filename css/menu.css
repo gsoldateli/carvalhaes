@@ -84,33 +84,64 @@
 	transition: transform .3s, background-color .3s;
 }
 
-.menu__item--active,
-.menu__item:hover {
+.menu__item--active {
 	transform: scale(1.45);
 	background-color: #aaa;
 }
 
-.menu > .menu__item:nth-child(1).menu__item--active,
-.menu > .menu__item:nth-child(1):hover {
+@media(min-width: 769px) {
+	.menu__item:hover {
+		transform: scale(1.45);
+		background-color: #aaa;
+	}
+}
+
+.menu > .menu__item:nth-child(1).menu__item--active {
 	background-color: #66cccc;
 }
-.menu > .menu__item:nth-child(2).menu__item--active,
-.menu > .menu__item:nth-child(2):hover {
+.menu > .menu__item:nth-child(2).menu__item--active {
 	background-color: #996699;
 }
-.menu > .menu__item:nth-child(3).menu__item--active,
-.menu > .menu__item:nth-child(3):hover {
+.menu > .menu__item:nth-child(3).menu__item--active {
 	background-color: #cc9966;
 }
-.menu > .menu__item:nth-child(4).menu__item--active,
-.menu > .menu__item:nth-child(4):hover {
+.menu > .menu__item:nth-child(4).menu__item--active {
 	background-color: #333366;
 }
-.menu > .menu__item:nth-child(5).menu__item--active,
-.menu > .menu__item:nth-child(5):hover {
+.menu > .menu__item:nth-child(5).menu__item--active {
 	background-color: #66cccc;
 }
-.menu > .menu__item:nth-child(6).menu__item--active,
-.menu > .menu__item:nth-child(6):hover {
+.menu > .menu__item:nth-child(6).menu__item--active {
 	background-color: #66cccc;
+}
+
+@media(min-width: 769px) {
+	.menu__item:hover {
+		transform: scale(1.45);
+		background-color: #aaa;
+	}
+
+	.menu > .menu__item:nth-child(1):hover {
+		background-color: #66cccc;
+	}
+	
+	.menu > .menu__item:nth-child(2):hover {
+		background-color: #996699;
+	}
+	
+	.menu > .menu__item:nth-child(3):hover {
+		background-color: #cc9966;
+	}
+	
+	.menu > .menu__item:nth-child(4):hover {
+		background-color: #333366;
+	}
+	
+	.menu > .menu__item:nth-child(5):hover {
+		background-color: #66cccc;
+	}
+	
+	.menu > .menu__item:nth-child(6):hover {
+		background-color: #66cccc;
+	}	
 }
