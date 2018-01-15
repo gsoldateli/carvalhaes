@@ -27,7 +27,11 @@
     transition-delay: .4s;
 }
 
-.logo-menu:hover {
+#toggleMenu {
+	display: none;
+}
+
+.toggleMenu:checked ~ .logo-menu {
 	padding-left: 1rem;
 	background-color: rgba(255,255,255,1);
 	transform: translate3d(-180px,0,0);
@@ -40,7 +44,25 @@
     transition: transform .5s;
 }
 
-.logo-menu:hover > .logo-menu__imagem {
+@media(max-width: 768px) {
+	.logo-menu__imagem {
+		margin-left: 4px;
+	}
+}
+
+@media(min-width: 769px) {
+	.logo-menu:hover {
+		padding-left: 1rem;
+		background-color: rgba(255,255,255,1);
+		transform: translate3d(-180px,0,0);
+	}
+
+	.logo-menu:hover > .logo-menu__imagem {
+		transform: rotate(360deg);
+	}
+}
+
+.toggleMenu:checked ~ .logo-menu > .logo-menu__imagem {
 	transform: rotate(360deg);
 }
 
@@ -67,6 +89,7 @@
 	transform: scale(1.45);
 	background-color: #aaa;
 }
+
 .menu > .menu__item:nth-child(1).menu__item--active,
 .menu > .menu__item:nth-child(1):hover {
 	background-color: #66cccc;

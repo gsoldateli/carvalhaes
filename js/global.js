@@ -21,7 +21,7 @@
 
 		//Registra scroll que ativa menu lateral quando chega em determinada seção
 		$contentHolder.addEventListener('scroll',function(){
-			$pages.length
+
 			for(var x=0; x<$pages.length;x++) {
 				var $page = $pages[x];
 				if(isInViewport($page)) {
@@ -46,7 +46,7 @@
 	    var rect = $el.getBoundingClientRect();
 	    var elemTop = rect.top;
 	    var elemBottom = rect.bottom;
-	    console.log('====',Math.floor(elemTop),Math.floor(elemBottom),'===');
+	    //console.log('====',Math.floor(elemTop),Math.floor(elemBottom),'===');
 
 	    // Only completely visible elements return true:
 	    var isVisible = (Math.floor(elemTop) <= 0 && Math.floor(elemBottom) > 0); 
