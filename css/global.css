@@ -195,6 +195,10 @@ body {
 		padding-left: 0;
 	}
 
+	.page__logo {
+	    max-width: 83%;
+	}
+
 	.page__logo--centro {
 	    top: 100%;
 	    transform: translate3d(-14%,-106%,0);

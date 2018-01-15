@@ -34,6 +34,7 @@
 			}
 		});
 	}
+
 	function isInViewport($el,threshold) {
 		
 		if(threshold === undefined) {
@@ -105,5 +106,13 @@ function onLoadPage() {
 	$imageCol.style.height = $imageCol.previousElementSibling.getBoundingClientRect().height+'px';
 }
 
+function randomMenu() {
+	var min = 1;
+	var max = 3;
+	var sortedLogo = Math.floor(Math.random() * (max - min + 1)) + min;
+	document.getElementById("logo-random").src="images/logos/"+sortedLogo+".png";
+}
+
 $.ready(onLoadPage);
 registerMenuActions();
+randomMenu();
