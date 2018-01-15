@@ -56,7 +56,7 @@
 	    var elemTop = rect.top;
 	    var elemBottom = rect.bottom;
 	    //console.log('====',Math.floor(elemTop),Math.floor(elemBottom),'===');
-
+	    console.log(Math.floor(elemTop),Math.floor(elemBottom));
 	    // Only completely visible elements return true:
 	    var isVisible = (Math.floor(elemTop) <= 0 && Math.floor(elemBottom) > 0); 
 
@@ -74,13 +74,10 @@
 	    var elemTop = rect.top;
 	    var elemBottom = rect.bottom;
 	    var windowHeight = window.innerHeight
-|| document.documentElement.clientHeight
-|| document.body.clientHeight;
-	    console.log(rect);
-	    console.log('====',Math.floor(elemTop),Math.floor(elemBottom),'===');
+			|| document.documentElement.clientHeight
+			|| document.body.clientHeight;
 
 	    // Only completely visible elements return true:
-	    //var isVisible = (Math.floor(elemBottom) < (windowHeight*1.8)); 
 	    var isVisible = (Math.floor(elemTop) < windowHeight); 
 
 	    return isVisible;
@@ -157,7 +154,7 @@ function randomMenu() {
 	var min = 1;
 	var max = 3;
 	var sortedLogo = Math.floor(Math.random() * (max - min + 1)) + min;
-	document.getElementById("logo-random").src="images/logos/"+sortedLogo+".png";
+	document.getElementById("logo-random").src="assets/images/logos/"+sortedLogo+".png";
 }
 
 $.ready(onLoadPage);

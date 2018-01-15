@@ -243,18 +243,20 @@ body {
     opacity: 1;
   }
 }
+@media(min-width: 768px ) {
+	@keyframes fadeInUpLogo {
+	  from {
+	    opacity: 0;
+	    transform: translate3d(43%,-30%,0)  scale(0.8);
+	  }
 
-@keyframes fadeInUpLogo {
-  from {
-    opacity: 0;
-    transform: translate3d(43%,-30%,0)  scale(0.8);
-  }
-
-  to {
-    opacity: 1;
-    transform: translate3d(43%,-50%,0) scale(1);
-  }
+	  to {
+	    opacity: 1;
+	    transform: translate3d(43%,-50%,0) scale(1);
+	  }
+	}	
 }
+
 
 @keyframes fadeInLeft {
   from {
