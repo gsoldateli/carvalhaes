@@ -6,7 +6,8 @@
 		/* Registra ação do menu lateral */
 		$waypoints = document.querySelectorAll('[data-menu-id]');
 		var $pages = document.querySelectorAll('.page');
-
+		var $animatedElements = document.querySelectorAll('[data-animate-on-scroll]');
+		console.log($animatedElements);
 		//Adiciona ação de click nos menus laterais para mostrar a página
 		for(var x=0; x<$waypoints.length; x++) {
 			var $wp = $waypoints[x];
@@ -34,6 +35,14 @@
 				}
 			}
 
+			for(var x=0; x<$animatedElements.length;x++) {
+				var $el = $animatedElements[x];
+				if(isInViewportPartial($el)) {
+					console.log($el.dataset.animateOnScroll);
+					$el.classList.add($el.dataset.animateOnScroll);
+				}
+			}			
+
 		});
 	}
 
@@ -54,6 +63,28 @@
 
 	    return isVisible;
 	}
+
+	function isInViewportPartial($el,threshold) {
+		
+		if(threshold === undefined) {
+			threshold = 0;
+		}
+
+	    var rect = $el.getBoundingClientRect();
+	    var elemTop = rect.top;
+	    var elemBottom = rect.bottom;
+	    var windowHeight = window.innerHeight
+|| document.documentElement.clientHeight
+|| document.body.clientHeight;
+	    console.log(rect);
+	    console.log('====',Math.floor(elemTop),Math.floor(elemBottom),'===');
+
+	    // Only completely visible elements return true:
+	    //var isVisible = (Math.floor(elemBottom) < (windowHeight*1.8)); 
+	    var isVisible = (Math.floor(elemTop) < windowHeight); 
+
+	    return isVisible;
+	}	
 
 
 	//Função página carregada.
@@ -100,13 +131,26 @@
 
 })(window);
 
+function animateOnload() {
+	var $elements = document.querySelectorAll('[data-animate-onload]');
+	console.log($elements);
+
+	for(var x=0; x< $elements.length; x++) {
+		var $el = $elements[x];
+		$el.classList.add($el.dataset.animateOnload);
+	}
+}
 
 function onLoadPage() {
 	//Remove splash screen
 	fadeOut(document.querySelector('.splash'));
-
+	
+	//Make columns the same height the previous ones.
 	var $imageCol = document.querySelector('.same-height-previous');
 	$imageCol.style.height = $imageCol.previousElementSibling.getBoundingClientRect().height+'px';
+	
+	//Execute onload animations.
+	animateOnload();
 }
 
 function randomMenu() {
